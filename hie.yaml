@@ -70,6 +70,8 @@ cradle:
       component: "exe:csv-test"
     - path: "./examples/iris-classification"
       component: "exe:iris-classification"
+    - path: "./examples/matmul-shape-test"
+      component: "exe:matmul-shape-test"
 
     - path: "./experimental/bounding-box"
       component: "exe:bounding-box"
