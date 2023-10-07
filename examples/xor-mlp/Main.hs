@@ -69,6 +69,7 @@ main = do
     (newState, _) <- runStep state optimizer loss 1e-1
     return newState
   putStrLn "Final Model:"
+  putStrLn $ show $ layers trained
   putStrLn $ "0, 0 => " ++ (show $ squeezeAll $ model trained (asTensor [0, 0 :: Float]))
   putStrLn $ "0, 1 => " ++ (show $ squeezeAll $ model trained (asTensor [0, 1 :: Float]))
   putStrLn $ "1, 0 => " ++ (show $ squeezeAll $ model trained (asTensor [1, 0 :: Float]))

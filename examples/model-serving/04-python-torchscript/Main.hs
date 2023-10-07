@@ -16,7 +16,11 @@ main = do
   tsModule <- S.loadScript WithoutRequiredGrad "mnist.ts.pt"
 
   -- perform inference computation
-  let result = forward tsModule [ivt]
-  print result
+  let scores = forward tsModule [ivt]
+  print scores
+  case scores of
+    S.IVTensor scoresT ->
+      print $ argmax (Dim 0) RemoveDim $ squeezeAll scoresT
+    _ -> error "Whoops"
 
   putStrLn "Done"

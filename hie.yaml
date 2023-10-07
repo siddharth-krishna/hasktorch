@@ -70,8 +70,13 @@ cradle:
       component: "exe:csv-test"
     - path: "./examples/iris-classification"
       component: "exe:iris-classification"
+    - path: "./examples/plow-talk"
+      component: "exe:plow-talk"
     - path: "./examples/matmul-shape-test"
       component: "exe:matmul-shape-test"
+
+    - path: "./examples/model-serving/04-python-torchscript"
+      component: "exe:python-torchscript"
 
     - path: "./experimental/bounding-box"
       component: "exe:bounding-box"

@@ -4,6 +4,7 @@ packages:
     libtorch-ffi-helper/*.cabal
     hasktorch/*.cabal
     examples/*.cabal
+    examples/model-serving/*.cabal
     experimental/*/*.cabal
 
 source-repository-package

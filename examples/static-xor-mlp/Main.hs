@@ -113,7 +113,7 @@ instance
           . gt (toDevice @device (0.5 :: CPUTensor 'Float '[]))
           <$> rand @'[batchSize, 2] @'Float @device
 
-type Device = '( 'CUDA, 0)
+type Device = '( 'CPU, 0)
 
 train ::
   forall device batchSize model optim.
@@ -137,7 +137,7 @@ train learningRate (model, optim) = P.foldM step begin done . enumerateData
 
 main :: IO ()
 main = do
-  let numIters = 100000
+  let numIters = 10000
       learningRate = 0.1
   initModel <- sample (MLPSpec :: MLPSpec 2 1 4 'Float Device)
   let initOptim = mkAdam 0 0.9 0.999 (flattenParameters initModel)

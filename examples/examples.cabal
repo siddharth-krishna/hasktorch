@@ -310,3 +310,8 @@ executable matmul-shape-test
   main-is:             Main.hs
   build-depends:       libtorch-ffi
 
+executable plow-talk
+  import:              config
+  hs-source-dirs:      plow-talk
+  main-is:             Main.hs
+  build-depends:       libtorch-ffi
